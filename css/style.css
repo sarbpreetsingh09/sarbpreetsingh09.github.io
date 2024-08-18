@@ -362,6 +362,11 @@
 }
 /*** Single Page Hero Header End ***/
 
+/*** LIST ***/
+.bootstrapli {
+    color: var(--bs-primary);
+}
+/*** LIST End ***/
 
 /*** Feature Start ***/
 .feature .feature-item {
@@ -714,9 +719,42 @@
 
 
 /*** Testimonial Start ***/
+.partners-carousel .item {
+    text-align: center;
+    padding: 10px;
+}
+
+.testimonial-item {
+    height: 140px; /* Adjust based on your design requirements */
+}
+
+.testimonial-item img {
+    max-height: 100%; /* Ensures the image stays within the container */
+    width: auto; /* Maintains aspect ratio */
+}
+
+.partners-carousel img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+}
 .testimonial-carousel .owl-stage-outer {
     margin-top: 58px;
     margin-right: -1px;
+    align-items:center;
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+}
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .testimonial .owl-nav .owl-prev {

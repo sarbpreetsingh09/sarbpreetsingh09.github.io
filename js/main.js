@@ -48,15 +48,19 @@
     // testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1500,
-        center: false,
+        center: true,
         dots: false,
         loop: true,
         margin: 25,
-        nav : true,
+        nav : false,
+        autoplayTimeout: 1500,
+        autoplaySpeed: 1200,
+        autoplayHoverPause: false,
+        smartSpeed: 10,
         navText : [
-            '<i class="fa fa-arrow-right"></i>',
-            '<i class="fa fa-arrow-left"></i>'
+            
+            '<i class="fa fa-arrow-left"></i>',
+            '<i class="fa fa-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
@@ -67,13 +71,13 @@
                 items:1
             },
             768:{
-                items:2
+                items:5
             },
             992:{
-                items:2
+                items:5
             },
             1200:{
-                items:2
+                items:5
             }
         }
     });

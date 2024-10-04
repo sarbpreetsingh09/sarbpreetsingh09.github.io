@@ -98,6 +98,7 @@
 
 
 /*** Topbar Start ***/ 
+/* Icon after the toggle button */
 .topbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -108,30 +109,68 @@
     color: var(--bs-primary);
 }
 
+/* Dropdown item hover effect */
 .topbar .dropdown .dropdown-menu a:hover {
-    background: var(--bs-primary);
+    background: rgba(0, 123, 255, 0.25); /* Lighter hover background with glass effect */
     color: var(--bs-white);
 }
 
+
+
 .topbar .dropdown .dropdown-menu {
-    transform: rotateX(0deg);
-    visibility: visible;
-    background: var(--bs-light);
-    padding-top: 10px;
-    border: 0;
-    transition: .5s;
-    opacity: 1;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px; /* Adjust as needed */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(12px); /* Glass effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari compatibility */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
 }
+
+
+.topbar .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container-fluid, .container {
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Ensure the dropdown is above */
+    background: transparent; /* Ensure no background blocks the blur effect */
+}
+
+
 /*** Topbar End ***/
 
 
 /*** Navbar Start ***/
+/* Fix z-index for sticky navbar */
 .nav-bar {
-    /* background: var(--bs-white); */
-    backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.8); /* Adjust color and transparency as needed */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure navbar stays above other content */
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.55); /* Transparent glass background */
+    backdrop-filter: blur(10px); /* Apply blur to navbar */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
     transition: 1s;
+}
+
+
+
+.nav-bar.sticky-top {
+    z-index: 9999; /* Higher z-index when sticky to prevent issues */
 }
 
 .navbar-light .navbar-brand img {
@@ -258,13 +297,42 @@
         transition: .5s;
         opacity: 1;
     }
+    .wow.pulse {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 207, 255, 0.7);
+        }
+        70% {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 20px rgba(0, 207, 255, 0);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 207, 255, 0);
+        }
+    }
+
+    /* Hover effect on phone number */
+    a:hover .text-dark {
+        color: #00CFFF;
+    }
+
+    /* Button hover effect */
+    .btn:hover {
+        background: linear-gradient(45deg, #00CFFF, #1E90FF);
+        transform: scale(1.05);
+    }
 }
 /*** Navbar End ***/
 
 
 /*** Carousel Hero Header Start ***/
 .header-carousel .header-carousel-item {
-    height: 400px;
+    height: 500px;
 }
 
 .header-carousel .owl-nav .owl-prev,
@@ -446,14 +514,31 @@
 
 
 /*** Service Start ***/
+
 .service .service-item {
     border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 .service .service-item .service-img {
     position: relative;
     overflow: hidden;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.service-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-item a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .service .service-item .service-img img {
@@ -727,6 +812,19 @@
     padding: 10px;
 }
 
+/* .testimonial-section {
+    background: 
+    radial-gradient(circle at 70% 70%, rgba(1, 132, 255, 0.4), transparent 40%), 
+    radial-gradient(circle at 30% 50%, rgba(254, 82, 129, 0.3), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(72, 219, 251, 0.3), transparent 30%),
+    radial-gradient(circle at 60% 40%, rgba(155, 89, 182, 0.3), transparent 30%),
+    radial-gradient(circle at 20% 60%, rgba(46, 204, 113, 0.3), transparent 20%);
+    
+    background-size: 200% 200%;
+    background-blend-mode: screen;
+    animation: none;
+} */
+
 .testimonial-item {
     height: 140px; /* Adjust based on your design requirements */
 }
@@ -748,6 +846,10 @@
 
 .owl-carousel .owl-stage {
     display: flex;
+}
+
+.owl-nav {
+    display: none; /* Hides the navigation arrows */
 }
 
 

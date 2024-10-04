@@ -10,11 +10,11 @@
         }, 1);
     };
     spinner(0);
-    
-    
+
     // Initiate the wowjs
     new WOW().init();
-    
+
+    console.log('about to set the gsap animation');
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -24,7 +24,6 @@
             $('.nav-bar').removeClass('sticky-top shadow-sm').css('top', '-100px');
         }
     });
-
 
     // Header carousel
     $(".header-carousel").owlCarousel({
@@ -36,52 +35,48 @@
         smartSpeed: 500,
         dots: true,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
     });
 
-
-
-    // testimonial carousel
+    // Testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         center: true,
         dots: false,
         loop: true,
         margin: 25,
-        nav : false,
+        nav: false,
         autoplayTimeout: 1500,
         autoplaySpeed: 1200,
         autoplayHoverPause: false,
         smartSpeed: 10,
-        navText : [
-            
+        navText: [
             '<i class="fa fa-arrow-left"></i>',
             '<i class="fa fa-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:1
+            576: {
+                items: 1
             },
-            768:{
-                items:5
+            768: {
+                items: 5
             },
-            992:{
-                items:5
+            992: {
+                items: 5
             },
-            1200:{
-                items:5
+            1200: {
+                items: 5
             }
         }
     });
-
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
@@ -89,20 +84,58 @@
         time: 2000
     });
 
-
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
+    // Function to dynamically load external scripts using Promises
+    function loadScript(url) {
+        return new Promise(function (resolve, reject) {
+            const script = document.createElement('script');
+            script.src = url;
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+    }
 
+    
+
+            // Initialize Vanta Waves on the testimonial section if it exists
+            if (document.getElementById('testimonialSection')) {
+                VANTA.WAVES({
+                    el: "#testimonialSection",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00
+                });
+            }
+
+            // Initialize Vanta Topology on the breadcrumb background
+            VANTA.TOPOLOGY({
+                el: "#bgbreadcrumb",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x12dede,
+                backgroundColor: 0x1754c0
+            });
+       
 })(jQuery);
-

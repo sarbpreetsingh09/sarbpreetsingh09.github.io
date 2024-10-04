@@ -25,7 +25,7 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-
+    
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -72,8 +72,8 @@
     <!-- Topbar End -->
 
     <!-- Navbar & Hero Start -->
-    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
-        <div class="container">
+    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0" >
+        <div class="container" >
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="#" class="navbar-brand p-0">
                     <h1 class="text-primary mb-0"><i class="fab fa-slack me-2"></i> WealthSure</h1>
@@ -87,9 +87,7 @@
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                <span class="dropdown-toggle">Services</span>
-                            </a>
+                            <a href="#" class="nav-link dropdown-toggle">Services</a>
                             <div class="dropdown-menu">
                                 <a href="supervisa.html" class="dropdown-item">Super Visa Insurance</a>
                                 <a href="visitortocanada.html" class="dropdown-item">Visitor & Travel Insurance</a>
@@ -108,16 +106,25 @@
                     </div>
                 </div>
                 <div class="d-none d-xl-flex flex-shrink-0 ps-4">
-                    <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
+                    <!-- Call Button with blue-to-cyan gradient and pulse animation -->
+                    <a href="tel:+4163162828" class="btn btn-gradient btn-lg-square rounded-pill position-relative wow pulse"
+                        style="background: linear-gradient(45deg, #1E90FF, #00CFFF); color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"
                         data-wow-delay=".9s">
                         <i class="fa fa-phone-alt fa-2x"></i>
+                        <!-- Phone icon animation inside button -->
                         <div class="position-absolute" style="top: 7px; right: 12px;">
-                            <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                            <span><i class="fa fa-comment-dots text-white" style="font-size: 18px;"></i></span>
                         </div>
                     </a>
+                    <!-- Text section next to the button -->
                     <div class="d-flex flex-column ms-3">
-                        <span>Call to Our Experts</span>
-                        <a href="tel:+ 0123 456 7890"><span class="text-dark">+ 416 - 316 - 2828</span></a>
+                        <!-- Adjusted font and added hover effect for phone number -->
+                        <span style="font-weight:  font-size: 1.1rem; color: #333;">Talk to an Expert Now</span>
+                        <a href="tel:+4163162828" style="text-decoration: none;">
+                            <span class="text-dark" style="font-weight: 700; font-size: 1.2rem; color: #1E90FF; transition: color 0.3s;">
+                                + 416 - 316 - 2828
+                            </span>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -149,66 +156,59 @@
 
     <!-- Carousel Start -->
     <div class="header-carousel owl-carousel">
-        <div class="header-carousel-item bg-primary">
-            <div class="carousel-caption">
+        <div class="header-carousel-item" style="background: linear-gradient(90deg, rgba(0,45,105,1) 0%, #003d99 15%, #003d99 85%, rgba(0,45,105,1) 100%); position: relative; overflow: hidden;">
+            <div class="carousel-caption" style="position: relative; z-index: 2;">
                 <div class="container">
                     <div class="row g-4 align-items-center">
-                        <div class="col-lg-7 animated fadeInLeft">
+                        <div class="col-lg-6 animated fadeInLeft">
                             <div class="text-sm-center text-md-start">
-                                <h4 class="text-white text-uppercase fw-bold mb-4">Welcome To WealthSure</h4>
-                                <h1 class="display-1 text-white mb-4">Better Insurance Starts Here</h1>
-                                <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy...
-                                </p>
-                                <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i
-                                            class="fas fa-play-circle me-2"></i> Watch Video</a>
-                                    <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Learn More</a>
+                                <div class="text-center">
+                                <h1 class="display-4 text-white mb-3" style="font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Insurance made simple</h1>
+                                <h1 class="text-white mb-4 text-center" style="font-weight: 300; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); font-size: 1.5em;">With best insurance advisors & service</h1>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-5 animated fadeInRight">
-                            <div class="calrousel-img" style="object-fit: cover;">
-                                <img src="img/crousel2.png" class="img-fluid w-100" alt="">
+                        <div class="col-lg-6 animated fadeInRight">
+                            <div class="carousel-img" style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));">
+                                <img src="img/pngwing.png" class="img-fluid w-120" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjEiIGN5PSIxIiByPSIxIiBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg=='); opacity: 0.4; z-index: 1;"></div>
         </div>
-        <div class="header-carousel-item bg-primary">
-            <div class="carousel-caption">
+        <div class="header-carousel-item" style="background: linear-gradient(90deg, rgba(0,45,105,1) 0%, #003d99 15%, #003d99 85%, rgba(0,45,105,1) 100%); position: relative; overflow: hidden;">
+            <div class="carousel-caption" style="position: relative; z-index: 2;">
                 <div class="container">
                     <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
                         <div class="col-lg-5 animated fadeInLeft">
-                            <div class="calrousel-img">
-                                <img src="img/carousel-2.png" class="img-fluid w-100" alt="">
+                            <div class="carousel-img" style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));">
+                                <img src="img/Family7.png" class="img-fluid" style="width: 100%;" alt="">
                             </div>
                         </div>
                         <div class="col-lg-7 animated fadeInRight">
-                            <div class="text-sm-center text-md-end">
-                                <h4 class="text-white text-uppercase fw-bold mb-4">Welcome To WealthSure</h4>
-                                <h1 class="display-1 text-white mb-4">Right Insurance for every need</h1>
-                                <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy...
-                                </p>
-                                <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i
-                                            class="fas fa-play-circle me-2"></i> Watch Video</a>
-                                    <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Learn More</a>
-                                </div>
+                            <div class="text-center">
+                                <h1 class="display-4 text-white mb-4" style="font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Insurance for every need</h1>
+                                <h1 class="text-white mb-4" style="font-weight: 300; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); font-size: 1.5em;">With a wide range of insurance products</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjEiIGN5PSIxIiByPSIxIiBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg=='); opacity: 0.4; z-index: 1;"></div>
         </div>
     </div>
     <!-- Carousel End -->
 
     <!-- Service Start -->
-    <div class="container-fluid service bg-light py-5">
-        <div class="container py-5">
+    <div class="container-fluid service bg-light py-5" style="background: linear-gradient(180deg, rgba(191, 219, 254, 0.3) 0%, rgba(191, 219, 254, 0.3) 100%);">
+        <div class="container py-4" >
+            <div class="text-center mb-5 pb-5 mt-4 pt-4">
+                <!-- <h4 class="text-primary">Our Services</h4> -->
+                <h2 id="bestservices" class="display-6 mb-6" style="background: transparent; color: transparent; background: linear-gradient(80deg, #00275d 5%, #0099ff 100%); -webkit-background-clip: text;">We Provide Best Services in Canada</h2>
+                
+            </div>
             <!-- <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">Our Services</h4>
                 <h1 class="display-4 mb-4">We Provide Best Services</h1>
@@ -217,156 +217,182 @@
                     sint dolorem autem obcaecati, ipsam mollitia hic.
                 </p>
             </div> -->
-            <div class="row g-4 justify-content-center" >
-                <a href="supervisa.html">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s" >
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/Supervisa.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="supervisa.html" class="d-inline-block h4 mb-4">Super Visa Insurance</a>
+            <div class="row g-5 justify-content-center " >
+                
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s" >    
+                        <a href="supervisa.html">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="img/Supervisa.jpg" class="img-fluid rounded-top w-100" alt="">
+                                </div>
+                                <div class="service-content p-4">
+                                    <div class="service-content-inner">
+                                        <h4 class="mb-4">Super Visa Insurance</h4>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
-                </div>
+                
+                
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/LifeInsurance.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="life.html" class="d-inline-block h4 mb-4">Life Insurance</a>
+                    <a href="life.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/LifeInsurance.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">Life Insurance</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/visitor.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="mortgage.html" class="d-inline-block h4 mb-4">Visitor Insurance</a>
+                    <a href="visitortocanada.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/visitor.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">Visitor Insurance</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/Travel.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="investments.html" class="d-inline-block h4 mb-4">Travel Insurance</a>
+                    <a href="travel.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/Travel.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">Travel Insurance</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/student.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="#" class="d-inline-block h4 mb-4">International Student Insurance</a>
+                    <a href="student.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/student.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content px-4 pt-3 pb-1 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">International Student Insurance</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/criticalillness.png" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="#" class="d-inline-block h4 mb-4">Critical Illness Insurance</a>
+                    <a href="criticalillness.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/criticalillness.png" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content px-4 pt-3 pb-1 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">Critical Illness Insurance</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/Disability.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="#" class="d-inline-block h4 mb-4">Disability Insurance</a>
+                    <a href="disability.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/Disability.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">Disability Insurance</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/health.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="#" class="d-inline-block h4 mb-4">Health Insurance</a>
+                    <a href="health.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/health.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">Health Insurance</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/RRSP.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="#" class="d-inline-block h4 mb-4">RRSP</a>
+                    <a href="rrsp.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/RRSP.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">RRSP</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/TFSA.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="#" class="d-inline-block h4 mb-4">TFSA</a>
+                    <a href="tfsa.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/TFSA.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">TFSA</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/FHSA.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="#" class="d-inline-block h4 mb-4">FHSA</a>
+                    <a href="fhsa.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/FHSA.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">FHSA</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/RESP.jpg" class="img-fluid rounded-top w-100" alt="">
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <a href="#" class="d-inline-block h4 mb-4">RESP</a>
+                    <a href="resp.html">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/RESP.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content p-4 text-center">
+                                <div class="service-content-inner">
+                                    <h4 class="mb-4">RESP</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Services</a>
-                </div>
+                
+            </div>
+            <div class="text-center wow fadeInUp" data-wow-delay="0.2s" style="margin-top: 110px; margin-bottom: 30px;">
+                <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Services</a>
             </div>
         </div>
     </div>
@@ -376,12 +402,8 @@
     <div class="container-fluid feature  py-5">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary">Our Features</h4>
-                <h1 class="display-4 mb-4">Insurance Provides you a Better Future</h1>
-                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis
-                    cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt
-                    sint dolorem autem obcaecati, ipsam mollitia hic.
-                </p>
+                <h4 class="display-6 mb-6" style="background: transparent; color: transparent; background: linear-gradient(80deg, #00275d 5%, #0099ff 100%); -webkit-background-clip: text;">Our Features</h4>
+                <!-- <h1 class="display-6 mb-4">Why Choose Us</h1> -->
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
@@ -389,9 +411,8 @@
                         <div class="feature-icon p-4 mb-4">
                             <i class="far fa-handshake fa-3x"></i>
                         </div>
-                        <h4 class="mb-4">Trusted Partners</h4>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
-                            pariatur...
+                        <h4 class="mb-4">All Types of Insurance</h4>
+                        <p class="mb-4">We have a wide range of insurance products to meet all of your insurance needs.
                         </p>
                         <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
                     </div>
@@ -401,9 +422,9 @@
                         <div class="feature-icon p-4 mb-4">
                             <i class="fa fa-dollar-sign fa-3x"></i>
                         </div>
-                        <h4 class="mb-4">All Types of Insurance</h4>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
-                            pariatur...
+                        <h4 class="mb-4">Trusted Partners</h4>
+                        <p class="mb-4">
+                            We partner with top insurance companies in Canada providing you with best insurance experience.
                         </p>
                         <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
                     </div>
@@ -413,9 +434,9 @@
                         <div class="feature-icon p-4 mb-4">
                             <i class="fa fa-bullseye fa-3x"></i>
                         </div>
-                        <h4 class="mb-4">Flexible Plans</h4>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
-                            pariatur...
+                        <h4 class="mb-4">Claim Support</h4>
+                        <p class="mb-4">
+                            A dedicated team to support you with claims process, ensuring a smoother experience.
                         </p>
                         <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
                     </div>
@@ -425,9 +446,9 @@
                         <div class="feature-icon p-4 mb-4">
                             <i class="fa fa-headphones fa-3x"></i>
                         </div>
-                        <h4 class="mb-4">24/7 Fast Support</h4>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
-                            pariatur...
+                        <h4 class="mb-4">Advisor Support</h4>
+                        <p class="mb-4">
+                            Our team is always available to guide & support you better whenever you need it.
                         </p>
                         <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
                     </div>
@@ -440,7 +461,7 @@
     
 
     <!-- About Start -->
-    <div class="container-fluid bg-light about pb-5">
+    <!-- <div class="container-fluid bg-light about pb-5">
         <div class="container pb-5">
             <div class="row g-5">
                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
@@ -510,13 +531,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- About End -->
 
     
 
     <!-- FAQs Start -->
-    <div class="container-fluid faq-section bg-light py-5">
+    <!-- <div class="container-fluid faq-section bg-light py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
@@ -586,11 +607,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- FAQs End -->
 
     <!-- Blog Start -->
-    <div class="container-fluid blog py-5">
+    <!-- <div class="container-fluid blog py-5">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">From Blog</h4>
@@ -666,11 +687,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Blog End -->
 
     <!-- Team Start -->
-    <div class="container-fluid team pb-5">
+    <!-- <div class="container-fluid team pb-5">
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">Our Team</h4>
@@ -767,18 +788,18 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
     <!-- Testimonial Start -->
-    <div class="container-fluid testimonial pb-5">
-        <div class="container pb-5">
-            <div class="text-center mx-auto pb-0 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h1 class="display-4 mb-4">Our Partners</h1>
-                <p class="mb-0">All of Canada's Top Insurance companies
+    <div id="testimonialSection" class="container-fluid testimonial testimonial-section pb-5 ">
+        <div class="container pb-5 pt-5">
+            <div class="text-center mx-auto pb-0 pt-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h1 class="display-4 mb-4 text-light">Our Partners</h1>
+                <p class="mb-0 pb-5 text-light">Canada's Top Insurance companies
                 </p>
             </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
+            <div class="owl-carousel testimonial-carousel wow fadeInUp pb-5" data-wow-delay="0.2s">
                 <div class="testimonial-item  rounded d-flex justify-content-center align-items-center">
                     <div class="row g-0">
                         <div class="col-12  col-lg-12 col-xl-12">
@@ -929,7 +950,7 @@
                                         <!-- <img src="img/logo.png" alt="Logo"> -->
                                     </a>
                                     <p class="text-white mb-4">Better insurance, starts here...</p>
-                                    <div class="footer-btn d-flex">
+                                    <!-- <div class="footer-btn d-flex">
                                         <a class="btn btn-md-square rounded-circle me-3" href="#"><i
                                                 class="fab fa-facebook-f"></i></a>
                                         <a class="btn btn-md-square rounded-circle me-3" href="#"><i
@@ -938,7 +959,7 @@
                                                 class="fab fa-instagram"></i></a>
                                         <a class="btn btn-md-square rounded-circle me-0" href="#"><i
                                                 class="fab fa-linkedin-in"></i></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-xl-3">
@@ -952,7 +973,7 @@
                                     <a href="#"><i class="fas fa-angle-right me-2"></i> Contact</a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4">
+                            <!-- <div class="col-md-6 col-lg-6 col-xl-4">
                                 <div class="footer-item">
                                     <h4 class="mb-4 text-white">Instagram</h4>
                                     <div class="row g-3">
@@ -1018,7 +1039,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
@@ -1032,7 +1053,8 @@
                                             </div>
                                             <div>
                                                 <h4 class="text-white">Address</h4>
-                                                <p class="mb-0">Canada</p>
+                                                <p class="mb-0">37 Huntspoint Drive, Brampton ON 
+                                                    <br>L6P2E9</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1042,7 +1064,7 @@
                                                 <i class="fas fa-envelope fa-2x"></i>
                                             </div>
                                             <div>
-                                                <h4 class="text-white">Mail Us</h4>
+                                                <h4 class="text-white">Email Us</h4>
                                                 <p class="mb-0">info.wealthsure@gmail.com</p>
                                             </div>
                                         </div>
@@ -1124,7 +1146,13 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

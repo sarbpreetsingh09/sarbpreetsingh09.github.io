@@ -610,18 +610,16 @@
     z-index: 9;
 }
 
-.service .service-item .service-content .service-content-inner .h4,
-.service .service-item .service-content .service-content-inner p {
+.service .service-item .service-content .service-content-inner h4{
     transition: 0.5s;
 }
 
-.service .service-item:hover .service-content .service-content-inner .h4,
-.service .service-item:hover .service-content .service-content-inner p {
+.service-item:hover .service-content .service-content-inner h4{
     color: var(--bs-white);
 }
 
 .service .service-item:hover .service-content .service-content-inner .btn.btn-primary {
-    color: var(--bs-primary);
+    color: var(--bs-white);
     background: var(--bs-white);
 }
 
@@ -631,7 +629,7 @@
 }
 
 .service .service-item:hover .service-content .service-content-inner .h4:hover {
-    color: var(--bs-dark);
+    color: var(--bs-white);
 }
 
 .service .service-item .service-content::after {
@@ -827,6 +825,9 @@
 
 .testimonial-item {
     height: 140px; /* Adjust based on your design requirements */
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(1, 10, 99, 0.2);
+    
 }
 
 .testimonial-item img {

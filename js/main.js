@@ -112,17 +112,39 @@
 
             // Initialize Vanta Waves on the testimonial section if it exists
             if (document.getElementById('testimonialSection')) {
-                VANTA.WAVES({
+                // VANTA.WAVES({
+                //     el: "#testimonialSection",
+                //     mouseControls: true,
+                //     touchControls: true,
+                //     gyroControls: false,
+                //     minHeight: 200.00,
+                //     minWidth: 200.00,
+                //     scale: 1.00,
+                //     scaleMobile: 1.00
+                // });
+                VANTA.CLOUDS({
                     el: "#testimonialSection",
                     mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: 200.00,
-                    minWidth: 200.00,
-                    scale: 1.00,
-                    scaleMobile: 1.00
-                });
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  skyColor: 0x1462c5
+                    })
             }
+            
+            if (document.getElementById('bgbreadcrumbtravel')) {
+                VANTA.CLOUDS({
+                    el: "#bgbreadcrumbtravel",
+                    mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  skyColor: 0x1462c5    
+                    })
+            }
+            
 
             // Initialize Vanta Topology on the breadcrumb background
             VANTA.TOPOLOGY({

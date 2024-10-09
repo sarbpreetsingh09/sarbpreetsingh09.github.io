@@ -30,4 +30,10 @@ $link-decoration: none;
 
 $enable-negative-margins: true;
 
+/* Disable color scheme adjustment */
+$enable-prefers-color-scheme: false;
+
+/* Disable CSS variables to prevent color adjustments */
+$enable-css-vars: false;
+
 @import "bootstrap/scss/bootstrap";

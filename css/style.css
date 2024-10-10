@@ -394,7 +394,7 @@
 
 @media (max-width: 767px) {
     .header-carousel .header-carousel-item {
-        height: 950px;
+        height: 650px;
     }
 
     .header-carousel .owl-nav .owl-prev {
